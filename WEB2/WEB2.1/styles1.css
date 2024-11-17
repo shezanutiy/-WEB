@@ -1,0 +1,47 @@
+/* Общие стили */
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.seven {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 5px;
+}
+
+/* Квадратные блоки */
+.block {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+}
+
+/* Формирование "7" */
+.seven div:nth-child(1),
+.seven div:nth-child(2),
+.seven div:nth-child(3),
+.seven div:nth-child(6),
+.seven div:nth-child(9) {
+    background-color: #007bff;
+}
+
+.seven div:nth-child(4),
+.seven div:nth-child(5),
+.seven div:nth-child(7),
+.seven div:nth-child(8),
+.seven div:nth-child(10),
+.seven div:nth-child(11) {
+    background-color: transparent;
+}

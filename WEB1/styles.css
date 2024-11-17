@@ -1,4 +1,4 @@
-/* Общие стили */
+
 body {
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -10,7 +10,7 @@ body {
 
 h1 {
     font-size: 24px;
-    font-family: 'CustomFont', sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
     color: #333;
 }
@@ -24,7 +24,6 @@ p, ul, ol, table {
     margin-bottom: 1em;
 }
 
-/* Картинки */
 .center-img {
     display: block;
     margin: 0 auto;
@@ -40,7 +39,6 @@ p, ul, ol, table {
     margin: 0 0 15px 15px;
 }
 
-/* Таблица */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -58,7 +56,6 @@ table th {
     font-weight: bold;
 }
 
-/* Подсветка кода */
 pre {
     background-color: #2d2d2d;
     color: #f8f8f2;
@@ -67,18 +64,19 @@ pre {
     border-radius: 5px;
 }
 precolor {
-    color:#0073e6
+    color:#0073e6;
 }
 precolor2 {
-    color:chartreuse
+    color:red;
 }
+
 pre code {
     font-family: monospace;
     font-size: 14px;
     display: block;
+    white-space: pre-wrap;
 }
 
-/* Навигация */
 nav ul {
     display: flex;
     justify-content: center;

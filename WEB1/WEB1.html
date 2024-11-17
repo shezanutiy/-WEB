@@ -1,15 +1,15 @@
 <head>
-    <title>История языка C#</title>
+    <title>История языка Assembly</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>История языка программирования C#</h1>
+        <h1>Assembly: История и особенности</h1>
         <nav>
             <ul>
                 <li><a href="#history">История создания</a></li>
-                <li><a href="#overview">Краткий обзор языка</a></li>
+                <li><a href="#overview">Краткий обзор</a></li>
                 <li><a href="#examples">Примеры кода</a></li>
             </ul>
         </nav>
@@ -19,62 +19,56 @@
         <section id="history">
             <h2>История создания</h2>
             <p>
-                Язык программирования C# был разработан корпорацией Microsoft в начале 2000-х годов. Его создателем является Андерс Хейлсберг,
-                один из ведущих инженеров компании.
+                Assembly, или язык ассемблера, появился в 1940-х годах как средство программирования для первых компьютеров.
+                Его основная цель заключалась в предоставлении разработчикам более удобного способа работы с машинным кодом.
             </p>
-            <p>
-                Основной целью разработки C# было создание мощного, безопасного и простого в использовании языка для платформы .NET.
-                Язык впервые был представлен в 2001 году вместе с первым выпуском .NET Framework.
-            </p>
-            <img src="history.jpg" alt="История C#" class="center-img">
+            <img src="history.jpg" alt="История языка Assembly" class="center-img">
         </section>
 
         <section id="overview">
-            <h2>Краткий обзор языка</h2>
+            <h2>Краткий обзор</h2>
             <p>
-                C# - это объектно-ориентированный язык программирования, который сочетает в себе простоту и мощь. Он используется для разработки
-                приложений самых разных типов, включая десктопные, веб-приложения и мобильные приложения.
+                Assembly — это низкоуровневый язык программирования, который тесно связан с машинным кодом. Он используется для создания
+                высокоэффективных программ или в случаях, когда требуется прямой доступ к оборудованию.
             </p>
             <div>
                 <img src="overview.jpg" alt="Краткий обзор" class="float-left">
                 <ul>
-                    <li>Простота</li>
-                    <li>Безопасность</li>
-                    <li>Кросс-платформенность</li>
+                    <li>Высокая производительность</li>
+                    <li>Прямой доступ к оборудованию</li>
+                    <li>Тесная связь с машинным кодом</li>
                 </ul>
             </div>
-            <p>
-                Вот несколько ключевых особенностей C#:
-            </p>
+            <p>Вот ключевые особенности Assembly:</p>
             <ol>
-                <li>Поддержка объектно-ориентированного программирования (ООП).</li>
-                <li>Интеграция с платформой .NET.</li>
-                <li>Современный синтаксис.</li>
+                <li>Управление памятью.</li>
+                <li>Работа с регистрами процессора.</li>
+                <li>Создание драйверов и ОС.</li>
             </ol>
             <table>
                 <caption>Сравнение с другими языками</caption>
                 <thead>
                     <tr>
                         <th>Язык</th>
+                        <th>Уровень</th>
                         <th>Применение</th>
-                        <th>Сложность</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>Assembly</td>
+                        <td>Низкий</td>
+                        <td>Драйверы, системы</td>
+                    </tr>
+                    <tr>
                         <td>C#</td>
+                        <td>Средний</td>
                         <td>Общие приложения</td>
-                        <td>Средняя</td>
                     </tr>
                     <tr>
                         <td>Python</td>
+                        <td>Высокий</td>
                         <td>Наука о данных, веб</td>
-                        <td>Низкая</td>
-                    </tr>
-                    <tr>
-                        <td>C++</td>
-                        <td>Игры, системы</td>
-                        <td>Высокая</td>
                     </tr>
                 </tbody>
             </table>
@@ -83,19 +77,26 @@
         <section id="examples">
             <h2>Примеры кода</h2>
             <p>
-                Вот пример простейшей программы на C#:
+                Пример простейшей программы на языке Assembly, выводящей "Hello, World!" на экран:
             </p>
             <pre>
                 <code>
-<precolor>using </precolor> System;
-
-<precolor>class</precolor> Program {
-    <precolor>static void</precolor> Main() {
-        Console.WriteLine(<precolor2>"Hello, World!"</precolor2>);
-    }
-}
+<precolor>section</precolor> .data
+    msg <precolor>db</precolor> <precolor2>'Hello, World!'</precolor2>, 0
+<precolor>section</precolor> .text
+    <precolor>global</precolor> _start
+_start:
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, msg
+    mov rdx, 13
+    syscall
+    mov rax, 60
+    xor rdi, rdi
+    syscall
                 </code>
             </pre>
+            <img src="example.png" alt="Примеры кода" class="float-right">
         </section>
     </main>
 

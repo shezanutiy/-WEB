@@ -39,21 +39,45 @@ p, ul, ol, table {
     margin: 0 0 15px 15px;
 }
 
-table {
+
+table.t2 {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1em;
+    font-family: Georgia;
 }
-
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-}
-
-table th {
-    background-color: #eee;
+.t2 caption {
+    padding-bottom: 0.5em;
     font-weight: bold;
+    font-size: 16px;
+}
+.t2 th, .t2 td {
+    padding: 4px 8px;
+    border: 2px solid #fff;
+    background: #fbd7b4;
+}
+.t2 thead th {
+    padding: 2px 8px;
+    background: #eb8a3a;
+    text-align: left;
+    font-weight: normal;
+    font-size: 13px;
+    color: #fff;
+}
+.t2 tbody tr:nth-child(odd) *:nth-child(even), 
+.t2 tbody tr:nth-child(even) *:nth-child(odd) {
+    background: #f3eddd;
+}
+.t2 tfoot th {
+    padding: 2px 8px;
+    background: #eb8a3a;
+    text-align: left;
+    font-weight: normal;
+    font-size: 10px;
+    color: #fff;
+}
+.t2 tr *:nth-child(3), 
+.t2 tr *:nth-child(4) {
+    text-align: left;
 }
 
 pre {

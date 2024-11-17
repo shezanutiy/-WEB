@@ -1,6 +1,9 @@
-
+@font-face {
+    font-family: 'cyrillic_pixel-7';
+    src: url('cyrillic_pixel-7.tff') format('tff');
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     font-size: 14px;
     line-height: 1.6;
     margin: 0;
@@ -10,13 +13,14 @@ body {
 
 h1 {
     font-size: 24px;
-    font-family: Arial, sans-serif;
+    font-family: "cyrillic_pixel-7";
     text-align: center;
     color: #333;
 }
 
 h2 {
     font-size: 18px;
+    font-family: "cyrillic_pixel-7";
     color: #555;
 }
 
@@ -106,17 +110,22 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 0;
+    background-color: #eb8a3a;
 }
 
 nav li {
+    background-color: #eb8a3a;
     margin: 0 10px;
 }
 
 nav a {
     text-decoration: none;
-    color: #0073e6;
+    color: #000000;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
+pl {
+    list-style-image: url(assembly.jpg);
+   }

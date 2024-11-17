@@ -1,0 +1,100 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 24px;
+    font-family: 'CustomFont', sans-serif;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 18px;
+    color: #555;
+}
+
+p, ul, ol, table {
+    margin-bottom: 1em;
+}
+
+/* Картинки */
+.center-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.float-left {
+    float: left;
+    margin: 0 15px 15px 0;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 15px 15px;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+/* Подсветка кода */
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 10px;
+    overflow: auto;
+    border-radius: 5px;
+}
+precolor {
+    color:#0073e6
+}
+precolor2 {
+    color:chartreuse
+}
+pre code {
+    font-family: monospace;
+    font-size: 14px;
+    display: block;
+}
+
+/* Навигация */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

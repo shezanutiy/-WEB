@@ -17,7 +17,7 @@ function processArray() {
     }
 
     if (lastIndex === -1) {
-        document.getElementById("result").textContent = "Нет элементов с положительным косинусом. Произведение: 0";
+        document.getElementById("result").textContent = "Произведение: 0";
         return;
     }
 

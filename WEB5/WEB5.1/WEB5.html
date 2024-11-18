@@ -1,0 +1,29 @@
+<head>
+    <title>Цветы с доставкой</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Рассчитайте время доставки цветов</h1>
+        <form id="orderForm">
+            <label for="day">Выберите день недели:</label>
+            <select id="day" required>
+                <option value="1">Понедельник</option>
+                <option value="2">Вторник</option>
+                <option value="3">Среда</option>
+                <option value="4">Четверг</option>
+                <option value="5">Пятница</option>
+                <option value="6">Суббота</option>
+                <option value="7">Воскресенье</option>
+            </select>
+
+            <label for="time">Введите время заказа (часы):</label>
+            <input type="number" id="time" min="0" max="23" required>
+
+            <button type="submit">Рассчитать</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

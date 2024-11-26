@@ -34,10 +34,14 @@ function deleteLast() {
 
 function calculate() {
     try {
-        displayValue = eval(displayValue).toString();
+        if (displayValue.includes('/0')) {
+            displayValue = 'Ошибка';
+        } else {
+            displayValue = eval(displayValue).toString();
+        }
         updateDisplay();
     } catch {
-        displayValue = 'Error';
+        displayValue = 'Ошибка';
         updateDisplay();
     }
 }
@@ -53,14 +57,24 @@ function toggleSign() {
 
 function calculateSqrt() {
     if (displayValue) {
-        displayValue = Math.sqrt(parseFloat(displayValue)).toString();
+        const num = parseFloat(displayValue);
+        if (num < 0) {
+            displayValue = 'Ошибка';
+        } else {
+            displayValue = Math.sqrt(num).toString();
+        }
         updateDisplay();
     }
 }
 
 function calculateInverse() {
     if (displayValue) {
-        displayValue = (1 / parseFloat(displayValue)).toString();
+        const num = parseFloat(displayValue);
+        if (num === 0) {
+            displayValue = 'Ошибка';
+        } else {
+            displayValue = (1 / num).toString();
+        }
         updateDisplay();
     }
 }

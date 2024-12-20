@@ -14,15 +14,13 @@ $user = $_SESSION['user'];
     <title>Личный кабинет</title>
 </head>
 <body>
+<?php include 'header.php'; ?>
 <div class="container">
-    <!-- Ссылка на главную -->
-    <p><a href="index.php" class="back-to-home">На главную</a></p>
 <div class="container">
     <h1>Личный кабинет</h1>
     <p>Добро пожаловать, <strong><?= htmlspecialchars($user['username']) ?></strong></p>
     <p>Роль: <?= htmlspecialchars($user['role']) ?></p>
     
-    <!-- Проверяем роль пользователя -->
     <?php if ($user['role'] === 'admin'): ?>
         <p><a href="admin.php">Перейти в админ-панель</a></p>
     <?php endif; ?>

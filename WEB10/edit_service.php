@@ -49,6 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Редактировать услугу</title>
 </head>
 <body>
+<?php include 'header.php'; ?>
 <div class="container">
     <p><a href="admin.php" class="back-to-home">Назад в админ-панель</a></p>
     <h1>Редактировать услугу</h1>

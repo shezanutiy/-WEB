@@ -33,8 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Название страницы</title>
 </head>
 <body>
+<?php include 'header.php'; ?>
 <div class="container">
-    <p><a href="index.php" class="back-to-home">На главную</a></p>
 <div class="container">
 <h1>Добавление нового пользователя</h1>
 <form method="post">

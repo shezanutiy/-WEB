@@ -2,16 +2,13 @@
 include 'db.php';
 session_start();
 
-// Проверяем, что текущий пользователь - администратор
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
     die("Доступ запрещён!");
 }
 
-// Получаем список всех пользователей
 $stmt = $pdo->query("SELECT * FROM users");
 $users = $stmt->fetchAll();
 
-// Получаем список всех услуг
 $stmt = $pdo->query("SELECT * FROM services");
 $services = $stmt->fetchAll();
 ?>
@@ -22,18 +19,15 @@ $services = $stmt->fetchAll();
     <title>Админ панель</title>
 </head>
 <body>
+<?php include 'header.php'; ?>
 <div class="container">
-    <!-- Ссылка на главную -->
-    <p><a href="index.php" class="back-to-home">На главную</a></p>
 
     <h1>Админ панель</h1>
-    
-    <!-- Добавление нового пользователя и услуги -->
+
     <a href="adduser.php" class="back-to-home">Добавить нового пользователя</a><br><br>
     <br>
     <a href="add_service.php" class="back-to-home">Добавить новую услугу</a><br><br>
 
-    <!-- Список пользователей -->
     <div class="section-title">Список пользователей</div>
     <?php if (!empty($users)): ?>
         <table>

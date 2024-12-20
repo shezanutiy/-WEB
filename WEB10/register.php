@@ -20,9 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Регистрация</title>
 </head>
 <body>
+<?php include 'header.php'; ?>
     <div class="container">
-
-    <p><a href="index.php" class="back-to-home">На главную</a></p>
 <div class="container">
     <h1>Регистрация</h1>
     <form method="post">

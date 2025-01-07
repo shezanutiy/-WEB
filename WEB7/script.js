@@ -87,3 +87,15 @@ function calculatePercentage() {
 }
 
 updateDisplay();
+
+function appendNumber(number) {
+    if (number === '.') {
+        const lastNumber = displayValue.split(/[\+\-\*\/]/).pop();
+        if (lastNumber.includes('.')) {
+            return;
+        }
+    }
+    displayValue += number;
+    updateDisplay();
+}
+

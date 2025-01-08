@@ -25,13 +25,11 @@ body {
     padding: 20px;
     border: 2px solid black;
 
-    /* min-height переопределяет высоту 1 ячейки */
     min-height: 80px;
     margin: 10px;
 }
 
 
-/*  1200 <= ширины экрана <= +inf  */
 .color_CD5C5C { background-color: #CD5C5C; width: 600px;}
 .color_DC143C { background-color: #DC143C; width: 600px;}
 .color_FFC0CB { background-color: #FFC0CB; width: 800px;}
